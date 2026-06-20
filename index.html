@@ -3,28 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Plainify - Document Simplifier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Plainify</h1>
+            <p class="tagline">Paste a legal or medical document and get a plain-language version, checked for accuracy.</p>
+        </header>
 
-    <h1>Plainify</h1>
-    <p>Paste a legal or medical document below to get a plain-language version.</p>
+        <div class="disclaimer">
+            <strong>Note:</strong> Plainify is a learning project and does not replace professional legal or medical advice. Always consult a qualified professional for decisions that matter.
+        </div>
 
-    <textarea id="documentInput" rows="10" placeholder="Paste your document here..."></textarea>
+        <div class="input-section">
+            <textarea id="documentInput" rows="8" placeholder="Paste your document here..."></textarea>
+            <div class="actions">
+                <button id="simplifyBtn">Simplify Document</button>
+                <span id="statusMessage"></span>
+            </div>
+        </div>
 
-    <button id="simplifyBtn">Simplify Document</button>
+        <div id="results">
+            <div class="result-block">
+                <span class="result-label">Plain Language Version</span>
+                <div class="simplified-card" id="finalText"></div>
+            </div>
 
-    <div id="statusMessage"></div>
+            <div class="result-block">
+                <span class="result-label">Verification Notes</span>
+                <div class="verification-card" id="verificationResult"></div>
+            </div>
 
-    <div id="results" style="display: none;">
-        <h2>Simplified Version</h2>
-        <p id="finalText"></p>
-
-        <h3>Original Key Points</h3>
-        <p id="extractedPoints"></p>
-
-        <h3>Verification Notes</h3>
-        <p id="verificationResult"></p>
+            <div class="result-block">
+                <span class="result-label">Original Key Points</span>
+                <div class="detail-card" id="extractedPoints"></div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>

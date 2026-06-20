@@ -1,0 +1,183 @@
+/* ===== Design tokens ===== */
+:root {
+    --bg: #FAF8F4;
+    --ink: #1A2238;
+    --ink-soft: #4A4F66;
+    --teal: #2D9596;
+    --teal-soft: #E8F4F4;
+    --amber: #C9A66B;
+    --amber-soft: #FBF3E6;
+    --border: #E3DFD6;
+    --radius: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 60px 24px 100px;
+}
+
+/* ===== Header ===== */
+header {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+}
+
+.tagline {
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 520px;
+}
+
+/* ===== Disclaimer ===== */
+.disclaimer {
+    background: var(--amber-soft);
+    border: 1px solid var(--amber);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin: 24px 0 36px;
+}
+
+.disclaimer strong {
+    color: var(--ink);
+}
+
+/* ===== Input area ===== */
+.input-section {
+    margin-bottom: 32px;
+}
+
+textarea {
+    width: 100%;
+    padding: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--ink);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    background: white;
+    resize: vertical;
+    min-height: 160px;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px var(--teal-soft);
+}
+
+textarea::placeholder {
+    color: #A8A398;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 14px;
+}
+
+button {
+    background: var(--ink);
+    color: white;
+    border: none;
+    padding: 13px 28px;
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+button:hover:not(:disabled) {
+    background: var(--teal);
+}
+
+button:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+button:disabled {
+    background: var(--border);
+    color: var(--ink-soft);
+    cursor: not-allowed;
+}
+
+#statusMessage {
+    font-size: 14px;
+    color: var(--ink-soft);
+}
+
+/* ===== Results ===== */
+#results {
+    display: none;
+    margin-top: 48px;
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
+}
+
+.result-block {
+    margin-bottom: 32px;
+}
+
+.result-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    margin-bottom: 10px;
+}
+
+.simplified-card {
+    background: var(--teal-soft);
+    border: 1px solid var(--teal);
+    border-radius: var(--radius);
+    padding: 24px;
+    font-size: 16px;
+    white-space: pre-wrap;
+}
+
+.detail-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    white-space: pre-wrap;
+}
+
+.verification-card {
+    background: var(--amber-soft);
+    border: 1px solid var(--amber);
+    border-radius: var(--radius);
+    padding: 20px;
+    font-size: 14px;
+    white-space: pre-wrap;
+}
