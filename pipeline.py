@@ -13,6 +13,18 @@ api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
  
 app = FastAPI()
+
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
  
  
 class DocumentRequest(BaseModel):

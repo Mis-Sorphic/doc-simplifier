@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plainify - Document Simplifier</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Plainify</h1>
+    <p>Paste a legal or medical document below to get a plain-language version.</p>
+
+    <textarea id="documentInput" rows="10" placeholder="Paste your document here..."></textarea>
+
+    <button id="simplifyBtn">Simplify Document</button>
+
+    <div id="statusMessage"></div>
+
+    <div id="results" style="display: none;">
+        <h2>Simplified Version</h2>
+        <p id="finalText"></p>
+
+        <h3>Original Key Points</h3>
+        <p id="extractedPoints"></p>
+
+        <h3>Verification Notes</h3>
+        <p id="verificationResult"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
