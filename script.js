@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:8000/simplify";
+const API_URL = "https://empowering-nature-production-4c50.up.railway.app/simplify";
 
 const documentInput = document.getElementById("documentInput");
 const simplifyBtn = document.getElementById("simplifyBtn");
